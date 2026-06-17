@@ -1,17 +1,6 @@
 require("dotenv").config();
 
-const { Client, GatewayIntentBits } = require("discord.js");
+console.log("TOKEN:", process.env.TOKEN ? "있음" : "없음");
+console.log("LENGTH:", process.env.TOKEN?.length);
 
-const client = new Client({
-  intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.MessageContent
-  ]
-});
-
-client.once("ready", () => {
-  console.log(`${client.user.tag} 로그인 완료`);
-});
-
-client.login(process.env.TOKEN);
+process.exit(0);
