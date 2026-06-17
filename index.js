@@ -45,7 +45,10 @@ ${text}`
 
 
 client.login(process.env.TOKEN)
-.catch(err => {
-  console.log("❌ 로그인 실패");
-  console.log(err.message);
-});
+  .then(() => {
+    console.log("✅ Discord 로그인 성공");
+  })
+  .catch((err) => {
+    console.log("❌ 로그인 실패");
+    console.log(err);
+  });
