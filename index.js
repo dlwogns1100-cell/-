@@ -1,7 +1,11 @@
 require("dotenv").config();
 
-console.log("길이:", process.env.TOKEN?.length);
-console.log("앞:", process.env.TOKEN?.slice(0,5));
-console.log("뒤:", process.env.TOKEN?.slice(-5));
+console.log("ENV KEYS:");
+console.log(Object.keys(process.env));
+
+console.log(
+  "TOKEN 존재:",
+  process.env.TOKEN
+);
 
 process.exit();
