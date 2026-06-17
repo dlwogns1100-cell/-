@@ -1,6 +1,8 @@
+console.log("BOT FILE START");
+
+require("dotenv").config();
+
 console.log(
- "TOKEN:",
- process.env.TOKEN?.slice(0,10),
- "길이:",
- process.env.TOKEN?.length
+  "TOKEN CHECK:",
+  process.env.TOKEN ? "있음" : "없음"
 );
